@@ -31,14 +31,14 @@ app.use(helmet())
 app.use(morgan('dev'))
 
 //const userRoutes = require('./routes/user.routes')
-//const productRoutes = require('./routes/product.routes')
+const buildingRoutes = require('./routes/building.routes')
 // const reviewRoutes = require('./routes/review.routes')
 // const recommendationRoutes = require('./routes/recommendation.routes')
 
 const errors = require('./errors')
 
 // app.use('/user', userRoutes)
-// app.use('/product', productRoutes)
+ app.use('/building', buildingRoutes)
 // app.use('/', reviewRoutes)
 // app.use('/', recommendationRoutes)
 // catch all not found response
