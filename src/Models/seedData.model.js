@@ -1,34 +1,34 @@
 //const Building = require('./building.model')
 const buildings = [
   {
-    id:1,
-    name:"Flexxie",
-    address:"Chasseeweg 14",
+   // id:1,
+    name:"LA",
+    address:"Spuistraat 1a",
     city:"Breda",
   },
   {
-    id:2,
-    name:"PipoFlex",
-    address:"Hogeveldweg",
+   // id:2,
+    name:"LB",
+    address:"Spuistraat 1b",
     city:"Breda",
   },
   {
-    id:3,
-    name:"Werkplek2Go",
-    address:"Chasseeweg 24",
+   // id:3,
+    name:"LC",
+    address:"Spuistraat 1c",
     city:"Breda",
   },
   {
-    id:4,
-    name:"M&W Eindhoven",
-    address:"Graaf Paulusstraat 2a",
-    city:"Eindhoven",
+   // id:4,
+    name:"LA",
+    address:"Ginnekenweg 2a",
+    city:"Rotterdam",
   },
   {
-    id:5,
-    name:"Tilburg werkplekken",
-    address:"Kerkstraat 11",
-    city:"Tilburg",
+   // id:5,
+    name:"LB",
+    address:"Ginnekenweg 2b",
+    city:"Rotterdam",
   },
 ];
     
