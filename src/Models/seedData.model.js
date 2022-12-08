@@ -82,5 +82,27 @@ const bookings = [
    
    },
 ];
+
+const users = [
+  {
+   // id:1,
+    name:"Oscar",
+    email:"Oscar@gmail.com",
+    password:"Breda",
+  },
+  {
+    // id:2,
+     name:"Bjorn",
+     email:"Bjorn@gmail.com",
+     password:"Breda",
+   },
+   {
+    // id:2,
+     name:"Twan",
+     email:"Twan@gmail.com",
+     password:"Breda",
+   },
+
+];
     
-module.exports = {buildings, rooms, bookings};
+module.exports = {buildings, rooms, bookings, users};
