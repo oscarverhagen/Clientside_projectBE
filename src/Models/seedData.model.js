@@ -62,22 +62,22 @@ const rooms = [
 const bookings = [
   {
    // id:1,
-  roomId: 1,
-    userId: 1,
+   room_id: 1,
+   user_id: 1,
     date: new Date(),
   
   },
   {
     // id:1,
-   roomId: 1,
-     userId:2,
+    room_id: 1,
+    user_id:2,
      date: new Date(),
    
    },
    {
     // id:1,
-   roomId: 1,
-     userId:3,
+    room_id: 1,
+    user_id:3,
      date: new Date(),
    
    },

@@ -4,8 +4,8 @@ const AutoIncrement = require('mongoose-sequence')(mongoose);
 // Create simple post model
 const bookingSchema = new Schema({
   buildingId: {type: Schema.Types.Number, ref: "Building"},
-  roomId: {type: Schema.Types.Number, ref: "Room"},
-  userId: {type: Schema.Types.Number, ref: "User"},
+  room_id: {type: Schema.Types.Number, ref: "Room"},
+  user_id: {type: Schema.Types.Number, ref: "User"},
   date: {
     type: Date,
     required: true,
