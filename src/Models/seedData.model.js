@@ -58,5 +58,29 @@ const rooms = [
    type: 'Work',
   },
 ];
+
+const bookings = [
+  {
+   // id:1,
+  roomId: 1,
+    userId: 1,
+    date: new Date(),
+  
+  },
+  {
+    // id:1,
+   roomId: 1,
+     userId:2,
+     date: new Date(),
+   
+   },
+   {
+    // id:1,
+   roomId: 1,
+     userId:3,
+     date: new Date(),
+   
+   },
+];
     
-module.exports = {buildings, rooms};
+module.exports = {buildings, rooms, bookings};

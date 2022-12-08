@@ -4,8 +4,10 @@ const AutoIncrement = require('mongoose-sequence')(mongoose);
 const roomSchema = new Schema({
   
  
-  building_Id: {
-    type: Schema.Types.Number, ref: "Building"
+  building_id: {
+   // type: Schema.Types.Number, ref: "Building"
+   type: Number,
+   required: true,
     },
     name: {
         type: String,

@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const Building = require('./models/building.model');
 const Room = require('./models/room.model');
+const Booking = require('./models/booking.model');
 const SeedData = require('./models/seedData.model.js')
 let mongoServer;
 // For mongodb-memory-server's old version (< 7) use this instead:
@@ -43,6 +44,12 @@ Room.create(SeedData.rooms, function (err, rooms) {
   if ( err ) throw err;
   console.log( rooms + '\n-- rooms inserted successfully' );
 });
+
+Booking.create(SeedData.bookings, function (err, bookings) {
+  if ( err ) throw err;
+  console.log( bookings + '\n-- bookings inserted successfully' );
+});
+
 console.log(mongoose.collections);
 module.exports = {
   connect,
