@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const Building = require('./models/building.model');
+const Room = require('./models/room.model');
 const SeedData = require('./models/seedData.model.js')
 let mongoServer;
 // For mongodb-memory-server's old version (< 7) use this instead:
@@ -34,9 +35,13 @@ const clear = async () => {
   }
 };
 //Insert Seeddata into the MongoDb InMemory
-Building.create(SeedData, function (err, buildings) {
+Building.create(SeedData.buildings, function (err, buildings) {
     if ( err ) throw err;
     console.log( buildings + '\n-- buildings inserted successfully' );
+});
+Room.create(SeedData.rooms, function (err, rooms) {
+  if ( err ) throw err;
+  console.log( rooms + '\n-- rooms inserted successfully' );
 });
 console.log(mongoose.collections);
 module.exports = {

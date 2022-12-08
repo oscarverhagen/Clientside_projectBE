@@ -32,6 +32,7 @@ app.use(morgan('dev'))
 
 //const userRoutes = require('./routes/user.routes')
 const buildingRoutes = require('./routes/building.routes')
+const roomRoutes = require('./routes/room.routes')
 // const reviewRoutes = require('./routes/review.routes')
 // const recommendationRoutes = require('./routes/recommendation.routes')
 
@@ -39,6 +40,7 @@ const errors = require('./errors')
 
 // app.use('/user', userRoutes)
  app.use('/building', buildingRoutes)
+ app.use('/room', roomRoutes)
 // app.use('/', reviewRoutes)
 // app.use('/', recommendationRoutes)
 // catch all not found response

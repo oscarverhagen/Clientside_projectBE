@@ -31,5 +31,32 @@ const buildings = [
     city:"Rotterdam",
   },
 ];
+
+const rooms = [
+  {
+   // id:1,
+   building_id: 1,
+    name:"room1",
+    size: 32,
+    space: 32,
+    type: 'Study',
+  },
+  {
+   // id:2,
+   building_id: 2,
+   name:"room2",
+   size: 32,
+   space: 15,
+   type: 'Work',
+  },
+  {
+   // id:3,
+   building_id: 1,
+   name:"room3",
+   size: 32,
+   space: 32,
+   type: 'Work',
+  },
+];
     
-module.exports = buildings;
+module.exports = {buildings, rooms};
