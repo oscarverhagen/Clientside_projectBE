@@ -88,7 +88,7 @@ const users = [
    // id:1,
     name:"Oscar",
     email:"Oscar@gmail.com",
-    password:"Breda",
+    password:"$2b$10$0xSPQ1p..zc88UfvpnV.NO2.i/uJqGuQN1/b1OzQNYSN/ppKaiPga",//Breda
   },
   {
     // id:2,
