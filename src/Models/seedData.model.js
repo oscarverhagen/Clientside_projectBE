@@ -94,7 +94,7 @@ const users = [
     // id:2,
      name:"Bjorn",
      email:"Bjorn@gmail.com",
-     password:"Breda",
+     password:"$2b$10$G9Mv0qPkmTp6hQJ5HXWxC.JMkk2wquUH9AvuMY2QDgUz8D6fmCCv.",
    },
    {
     // id:2,
