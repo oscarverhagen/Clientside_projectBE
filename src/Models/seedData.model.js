@@ -82,5 +82,27 @@ const bookings = [
    
    },
 ];
+
+const users = [
+  {
+   // id:1,
+    name:"Oscar",
+    email:"Oscar@gmail.com",
+    password:"$2b$10$0xSPQ1p..zc88UfvpnV.NO2.i/uJqGuQN1/b1OzQNYSN/ppKaiPga",//Breda
+  },
+  {
+    // id:2,
+     name:"Bjorn",
+     email:"Bjorn@gmail.com",
+     password:"$2b$10$G9Mv0qPkmTp6hQJ5HXWxC.JMkk2wquUH9AvuMY2QDgUz8D6fmCCv.",
+   },
+   {
+    // id:2,
+     name:"Twan",
+     email:"Twan@gmail.com",
+     password:"Breda",
+   },
+
+];
     
-module.exports = {buildings, rooms, bookings};
+module.exports = {buildings, rooms, bookings, users};
