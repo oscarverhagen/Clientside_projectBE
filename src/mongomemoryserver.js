@@ -37,24 +37,24 @@ const clear = async () => {
   }
 };
 //Insert Seeddata into the MongoDb InMemory
-// Building.create(SeedData.buildings, function (err, buildings) {
-//     if ( err ) throw err;
-//     console.log( buildings + '\n-- buildings inserted successfully' );
-// });
-// Room.create(SeedData.rooms, function (err, rooms) {
-//   if ( err ) throw err;
-//   console.log( rooms + '\n-- rooms inserted successfully' );
-// });
+Building.create(SeedData.buildings, function (err, buildings) {
+    if ( err ) throw err;
+    console.log( buildings + '\n-- buildings inserted successfully' );
+});
+Room.create(SeedData.rooms, function (err, rooms) {
+  if ( err ) throw err;
+  console.log( rooms + '\n-- rooms inserted successfully' );
+});
 
-// Booking.create(SeedData.bookings, function (err, bookings) {
-//   if ( err ) throw err;
-//   console.log( bookings + '\n-- bookings inserted successfully' );
-// });
+Booking.create(SeedData.bookings, function (err, bookings) {
+  if ( err ) throw err;
+  console.log( bookings + '\n-- bookings inserted successfully' );
+});
 
-// User.create(SeedData.users, function (err, users) {
-//   if ( err ) throw err;
-//   console.log( users + '\n-- users inserted successfully' );
-// });
+User.create(SeedData.users, function (err, users) {
+  if ( err ) throw err;
+  console.log( users + '\n-- users inserted successfully' );
+});
 
 console.log(mongoose.collections);
 module.exports = {
