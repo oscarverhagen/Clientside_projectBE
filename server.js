@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 // const connect = require('./connect')
-
+const mongoMemoryServer = require('./src/mongomemoryserver')
 const app = require('./src/app')
 
 // the order of starting the app and connecting to the database does not matter
@@ -17,7 +17,7 @@ app.listen(port, () => {
 // connect to the databases
 // connect.mongo(process.env.MONGO_PROD_DB)
 // connect.neo(process.env.NEO4J_PROD_DB)
-const mongoMemoryServer = require('./src/mongomemoryserver')
+
 
 mongoMemoryServer.connect();
 
