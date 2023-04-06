@@ -3,7 +3,7 @@ require('dotenv').config()
 
 // const connect = require('./connect')
 
-const app = require('./src/app')
+const app = require('./app')
 
 // the order of starting the app and connecting to the database does not matter
 // since mongoose buffers queries till there is a connection
