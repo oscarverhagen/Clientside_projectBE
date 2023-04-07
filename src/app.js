@@ -4,11 +4,13 @@ const express = require('express')
 // so express' error middleware can deal with it
 // saves us a try catch in each route handler
 // note: this will be standard in express 5.0, to be released soon
-
 require('express-async-errors')
+
 const app = express()
+
 const cors = require('cors')
 const helmet = require('helmet')
+
 const morgan = require('morgan')
 
 // parse json body of incoming request
@@ -23,47 +25,43 @@ app.use(cors())
 // not the topic of this example, but good to be aware of security issues
 // helmet sets headers to avoid common security risks
 // https://expressjs.com/en/advanced/best-practice-security.html
-
 app.use(helmet())
 
 // use morgan for logging
-
 app.use(morgan('dev'))
 
-//const userRoutes = require('./routes/user.routes')
 const buildingRoutes = require('./routes/building.routes')
 const roomRoutes = require('./routes/room.routes')
 const bookingRoutes = require('./routes/booking.routes')
-const userRoutes = require('./routes/user.routes')
-// const reviewRoutes = require('./routes/review.routes')
-// const recommendationRoutes = require('./routes/recommendation.routes')
+const authRoutes = require('./routes/auth.routes')
+
 
 const errors = require('./errors')
 
-// app.use('/user', userRoutes)
- app.use('/building', buildingRoutes)
- app.use('/room', roomRoutes)
- app.use('/booking', bookingRoutes)
- app.use('/user', userRoutes)
-// app.use('/', reviewRoutes)
-// app.use('/', recommendationRoutes)
+app.use('/building', buildingRoutes)
+app.use('/room', roomRoutes)
+app.use('/booking', bookingRoutes)
+app.use('/auth', authRoutes)
+
 // catch all not found response
-
-
 app.use('*', function(_, res) {
     res.status(404).end()
 })
+
 // error responses
 app.use('*', function(err, req, res, next) {
     console.error(`${err.name}: ${err.message}`)
     // console.error(err)
     next(err)
 })
+
 app.use('*', errors.handlers)
+
 app.use('*', function(err, req, res, next) {
     res.status(500).json({
         message: 'something really unexpected happened'
     })
 })
+
 // export the app object for use elsewhere
 module.exports = app
